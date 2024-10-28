@@ -16,12 +16,12 @@ public class MaquinaExpendedoraSimple {
      * precio del billete y el origen y destino dados. Se asume que el precio
      * del billete que se recibe es mayor que 0.
      */
-    public MaquinaExpendedoraSimple(int precioDelBillete, String origen, String destino) {
-        precioBillete = precioDelBillete;
+    public MaquinaExpendedoraSimple(){
+        precioBillete = 20;
         balanceClienteActual = 0;
         totalDineroAcumulado = 0;
-        estacionOrigen = origen;
-        estacionDestino = destino;
+        estacionOrigen = "León";
+        estacionDestino = "Bilbao";
     }
 
     /**
@@ -50,13 +50,13 @@ public class MaquinaExpendedoraSimple {
      */
     public void imprimirBillete() {
         // Simula la impresion de un billete
+        
         System.out.println("##################");
         System.out.println("# Billete de tren:");
         System.out.println("# De " + estacionOrigen + " a " + estacionDestino);
         System.out.println("# " + precioBillete + " euros.");
         System.out.println("##################");
         System.out.println();
-
         // Actualiza el total de dinero acumulado en la maquina
         totalDineroAcumulado = totalDineroAcumulado + balanceClienteActual;
         // Queda preparada para el proximo cliente
